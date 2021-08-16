@@ -1,6 +1,6 @@
 *CHECKOUT MY RESULT DESIGN (LIVE SITE) FROM THIS CHALLENGE:*
 
-single-price-grid-azmi.netlify.app
+https://single-price-grid-azmi.netlify.app 
 
 # Frontend Mentor - Single price grid component
 
