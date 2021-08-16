@@ -1,0 +1,251 @@
+/* ## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px */
+
+/* --------------MEYERWEB CSS Reset (Start)-------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* --------------MEYERWEB CSS Reset (End)-------------- */
+
+@font-face {
+    font-family: karla-r;
+    src: url(Karla-Regular.ttf);
+}
+
+@font-face {
+    font-family: karla-b;
+    src: url(Karla-Bold.ttf);
+}
+
+html {
+    font-size: 16px;
+    font-family:'Karla-r', sans-serif; 
+}
+
+body {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(247, 245, 245);
+    display: flex;
+}
+
+h1, h2 {
+    font-family: "karla-b";
+}
+
+.container {
+    max-width: 625px;
+    max-height: 475px;
+    background-color: lawngreen;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "subs why";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45% 55%;
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 35px;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    line-height: 3em;
+    color: hsl(179, 62%, 43%);
+}
+
+.header h2 {
+    line-height: 2.5em;
+    color: hsl(71, 73%, 54%);
+}
+
+.header p {
+    line-height: 1.5em;
+    color: hsl(218, 22%, 67%);
+}
+
+.subs {
+    grid-area: subs;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0 0 0 10px;
+    color: white;
+    padding: 25px 35px;
+}
+
+.subs h2 {
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+.subs p {
+    display: inline-block;
+}
+
+.subs p.price {
+    font-family: "karla-b";
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.subs p.desc {
+    color : hsl(201, 21%, 87%);
+    margin-left: 0.5em;
+    transform: translateY(-0.25em);
+}
+
+.subs button {
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-family: "karla-b";
+    font-size: 1.1em;
+    justify-content: center;
+    border-radius: 5px;
+    width: 240px;
+    height: 3rem;
+    margin-top: 30px;
+    box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.subs button:hover {
+    opacity: 0.9;
+}
+
+.why {
+    grid-area: why;
+    background-color: hsl(178, 40%, 55%);
+    border-radius: 0 0 10px 0;
+    color: white;
+    padding: 25px 35px;
+}
+
+.why h2 {
+    font-size: 1.1em;
+    line-height: 2em;
+    margin-bottom: 15px;
+}
+
+.why ul {
+    color: hsl(201, 21%, 87%);
+    margin: 7.5px 0;
+    font-size: 0.85em;
+
+}
+
+@media screen and (max-width:650px) {
+    .container {
+    grid-template-areas: 
+    "header"
+    "subs"
+    "why";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 625px;
+    max-height: 200vh;
+    margin: 20px 20px;
+    }
+
+    .header {
+        grid-area: header;
+        box-sizing: border-box;
+    }
+
+    .header h2 {
+        line-height: 1em;
+        margin-bottom: 1em;
+    }
+
+    .subs {
+        grid-area: subs;
+        display: inline;
+        border-radius: 0px;
+    }
+
+    .subs p.desc {
+        margin-top: 0px;
+        line-height: 0px;
+    }
+
+    .subs p.info {
+        line-height: 2.5em;
+    }
+        
+    .why {
+        grid-area: why;
+        border-radius: 0 0 10px 10px;
+    }
+
+}
+
